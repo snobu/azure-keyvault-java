@@ -16,7 +16,7 @@ export AZURE_TENANT_ID=zzz
 
 This is later used by `make run` to populate those environment variables before booting the application.
 
-Of course you can define those variables manually should you choose to do so. `make run` won't be able to pick them up in this case, however you can simply invoke `java -jar <path_to_jar>` instead.
+Of course you can define those variables manually should you choose to do so. `make run` won't be able to pick them up in this case, however you can simply invoke `java -jar <path_to_jar>` instead (do make sure it's in the same terminal session).
 
 ### Build .jar
 ```
