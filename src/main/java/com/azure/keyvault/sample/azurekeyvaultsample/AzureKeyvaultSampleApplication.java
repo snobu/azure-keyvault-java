@@ -17,7 +17,7 @@ public class AzureKeyvaultSampleApplication {
 				
 		// See this for clarity on DefaultAzureCredential:
 		// https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/identity/azure-identity#credentials
-		// In short: Use developing locally it expects a service principal as env vars.
+		// In short: When developing locally it expects a service principal as env vars.
 		// When running in Azure in a serivce that has Managed Identity enabled
 		// it will acquire a token via that mechanism (you don't need to provide any secrets)
 		DefaultAzureCredential credential = new DefaultAzureCredentialBuilder().build();
