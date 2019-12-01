@@ -6,12 +6,25 @@ When running in Azure, it will try to use Managed Identity if enabled (no need t
 See this for more:
 https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/identity/azure-identity#key-concepts
 
-### Build
+To develop locally create an `env_secrets.sh` bash script with the following content:
+
+```bash
+export AZURE_CLIENT_ID=xxx
+export AZURE_CLIENT_SECRET=yyy
+export AZURE_TENANT_ID=zzz
+```
+
+This is later used by `make run` to populate those environment variables before booting the application.
+
+Of course you can define those variables manually should you choose to do so. `make run` won't be able to pick them up in this case, however you can simply invoke `java -jar <path_to_jar>` instead.
+
+### Build .jar
 ```
 $ make build
 ```
 
-### Run
+### Run the application
+
 ```
 $ make run
 ```
